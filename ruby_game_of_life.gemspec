@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'game_of_life/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "game_of_life"
+  spec.name          = "ruby_game_of_life"
   spec.version       = GameOfLife::VERSION
   spec.authors       = ["Conrad King (RainbowReich)"]
   spec.email         = ["rainbowryke@gmail.com"]
