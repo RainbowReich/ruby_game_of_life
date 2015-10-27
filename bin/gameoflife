@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'game_of_life'
+
+if ARGV[0] == '-h' then
+	puts "Usage: gameoflife <filename> <num_generations>" 
+	return
+end
+
+f = File.new(ARGV[0], "r")
+map = GameOfLife.new
+map.from_s f.read
+
+
+
+ARGV[1].to_i.times do |i|
+	puts "Generation #{i}"
+	puts "-" * map.width
+	puts ""
+	puts map.to_s
+	puts ""
+	puts "-" * map.width
+	map.next_generation!	
+end
